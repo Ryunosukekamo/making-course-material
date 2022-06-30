@@ -1,0 +1,15 @@
+html,body{
+    width: 100%;
+}
+
+.main_content{
+    border: 1px solid black;
+    height: 100px;
+}
+
+.displaying_content{
+    display: none;
+    margin-top: 70px;
+    border: 1px solid black;
+    height: 100px;
+}
