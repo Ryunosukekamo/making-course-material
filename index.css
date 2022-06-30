@@ -2,14 +2,22 @@ html,body{
     width: 100%;
 }
 
+.outside_wrapper{
+    margin-top: 170px;
+}
+
 .main_content{
     border: 1px solid black;
     height: 100px;
 }
 
 .displaying_content{
-    display: none;
+    /* display: none; */
     margin-top: 70px;
     border: 1px solid black;
     height: 100px;
+}
+
+.inputting_value{
+    margin-top: 60px;
 }
