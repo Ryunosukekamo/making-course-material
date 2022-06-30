@@ -10,5 +10,8 @@ const chaningMainContent = () => {
     //リボンの長さを変更
     let mainContent = document.getElementById('main_contet');
     mainContent.style.width=`${mainContentFiledValue}%`;
-    
+
+    // もう一方の入力欄を表示
+    let displayingContentFiled =document.getElementById('displaying_content_filed');
+    displayingContentFiled.style.display="block";
 }

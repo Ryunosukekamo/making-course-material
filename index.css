@@ -12,7 +12,7 @@ html,body{
 }
 
 .displaying_content{
-    /* display: none; */
+    display: none;
     margin-top: 70px;
     border: 1px solid black;
     height: 100px;
@@ -20,4 +20,9 @@ html,body{
 
 .inputting_value{
     margin-top: 60px;
+}
+
+.displaying_content_filed{
+    display: none;
+    margin-top: 30px;
 }
