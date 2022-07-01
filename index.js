@@ -31,25 +31,45 @@ const chaningMainContent = () => {
 }
 
 const chaningSecondContent = () => {
-    // もう一方に入力した値を取得
-    let displayingContentFiled = document.getElementById('displaying_content_filed');
-    let displayingContentFiledValue = displayingContentFiled.value;
 
-    // リボンの長さを変更して、表示
-    let displayingContent = document.getElementById('displaying_content');
-    displayingContent.style.width = `${displayingContentFiledValue}%`;
-    displayingContent.style.display = "block";
+    new Promise(resolve => {
+        // もう一方に入力した値を取得
+        let displayingContentFiled = document.getElementById('displaying_content_filed');
+        let displayingContentFiledValue = displayingContentFiled.value;
 
-    // リボンの長さを保存
-    arrayForCalculate.push(displayingContentFiledValue);
+        // リボンの長さを変更して、表示
+        let displayingContent = document.getElementById('displaying_content');
+        displayingContent.style.width = `${displayingContentFiledValue}%`;
+        displayingContent.style.display = "block";
 
-    // 割り算の処理
-    const calculating = () => {
-        let mainContentValue = parseInt(arrayForCalculate[0]);
-        let secondContentValue = parseInt(arrayForCalculate[1]);
-        console.log(mainContentValue / secondContentValue);
+        // リボンの長さを保存
+        arrayForCalculate.push(displayingContentFiledValue);
 
-    }
+        resolve();
 
-    calculating();
+    }).then(() => {
+        return new Promise(resolve => {
+            // 割り算の処理
+            const calculating = () => {
+
+                if (arrayForCalculate[0] && arrayForCalculate[1]) {
+                    let mainContentValue = parseInt(arrayForCalculate[0]);
+                    let secondContentValue = parseInt(arrayForCalculate[1]);
+                    console.log(mainContentValue / secondContentValue);
+
+                } else {
+                    return;
+                }
+
+            }
+
+            calculating();
+            resolve();
+
+        })
+    })
+
 }
+
+
+
