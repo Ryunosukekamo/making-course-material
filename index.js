@@ -59,15 +59,17 @@ const chaningSecondContent = () => {
                     let secondContentValue = parseInt(arrayForCalculate[1]);
                     let answer = mainContentValue / secondContentValue;
                     console.log(answer);
-                    // for (let i = 1; i < answer; i++) {
+                    
+                    // 割った数を分だけdivを増やす
+                    for (let i = 1; i < answer; i++) {
                         let content = document.createElement('div');
-                        content.id = 'contentId';
+                        content.id = `contentId${i}`;
                         let outsideDisplayingContent = document.getElementById('outside_displaying_content');
                         outsideDisplayingContent.appendChild(content);
-                        let contentId = document.getElementById('contentId');
+                        let contentId = document.getElementById(`contentId${i}`);
                         contentId.style.width = `${secondContentValue}%`;
                         contentId.classList.add('add');
-                    // }
+                    }
                 }
             }
 
