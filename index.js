@@ -43,11 +43,6 @@ const chaningSecondContent = () => {
         outsideDisplayingContent.style.display = "flex";
         displayingContent.style.width = `${displayingContentFiledValue}%`;
         displayingContent.style.display = "block";
-        for (let i = 1; i < displayingContentFiledValue; i++) {
-        // let content = document.createElement('div');  
-        // i.setAttribute("class","displaying_content");
-        // displayingContent.appendChild("displayingContent");
-        }
 
         // リボンの長さを保存
         arrayForCalculate.push(displayingContentFiledValue);
@@ -62,10 +57,18 @@ const chaningSecondContent = () => {
                 if (arrayForCalculate[0] && arrayForCalculate[1]) {
                     let mainContentValue = parseInt(arrayForCalculate[0]);
                     let secondContentValue = parseInt(arrayForCalculate[1]);
-                    console.log(mainContentValue / secondContentValue);
-
+                    let answer = mainContentValue / secondContentValue;
+                    console.log(answer);
+                    // for (let i = 1; i < answer; i++) {
+                        let content = document.createElement('div');
+                        content.id = 'contentId';
+                        let outsideDisplayingContent = document.getElementById('outside_displaying_content');
+                        outsideDisplayingContent.appendChild(content);
+                        let contentId = document.getElementById('contentId');
+                        contentId.style.width = `${secondContentValue}%`;
+                        contentId.classList.add('add');
+                    // }
                 }
-
             }
 
             calculating();
