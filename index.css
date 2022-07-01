@@ -11,9 +11,13 @@ html,body{
     height: 100px;
 }
 
-.displaying_content{
+.outside_displaying_content{
     display: none;
     margin-top: 70px;
+}
+
+.displaying_content{
+    display: none;
     border: 1px solid black;
     height: 100px;
 }

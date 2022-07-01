@@ -38,9 +38,16 @@ const chaningSecondContent = () => {
         let displayingContentFiledValue = displayingContentFiled.value;
 
         // リボンの長さを変更して、表示
+        let outsideDisplayingContent = document.getElementById('outside_displaying_content');
         let displayingContent = document.getElementById('displaying_content');
+        outsideDisplayingContent.style.display = "flex";
         displayingContent.style.width = `${displayingContentFiledValue}%`;
         displayingContent.style.display = "block";
+        for (let i = 1; i < displayingContentFiledValue; i++) {
+        // let content = document.createElement('div');  
+        // i.setAttribute("class","displaying_content");
+        // displayingContent.appendChild("displayingContent");
+        }
 
         // リボンの長さを保存
         arrayForCalculate.push(displayingContentFiledValue);
@@ -62,10 +69,10 @@ const chaningSecondContent = () => {
             }
 
             calculating();
-            
+
             // ボタンの表示
             let btn = document.getElementById('btn');
-            btn.style.display="block";
+            btn.style.display = "block";
 
             resolve();
 

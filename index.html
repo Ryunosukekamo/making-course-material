@@ -14,12 +14,16 @@
     <main class="outside_wrapper">
         <div class="inside_wrapper">
             <div id="main_contet" class="main_content"></div>
-            <div id="displaying_content" class="displaying_content"></div>
+            <div id="outside_displaying_content" class="outside_displaying_content">
+                <div id="displaying_content" class="displaying_content"></div>
+
+            </div>
         </div>
 
         <div class="inputting_value">
             <input type="text" placeholder="値を入力してね！" id="main_content_filed" onchange="chaningMainContent()">
-            <input type="text" placeholder="値を入力してね！" id="displaying_content_filed" class="displaying_content_filed" onchange="chaningSecondContent()">
+            <input type="text" placeholder="値を入力してね！" id="displaying_content_filed" class="displaying_content_filed"
+                onchange="chaningSecondContent()">
         </div>
 
         <button id="btn" class="btn" onclick="loading()">元に戻す</button>
