@@ -57,18 +57,25 @@ const chaningSecondContent = () => {
                     let secondContentValue = parseInt(arrayForCalculate[1]);
                     console.log(mainContentValue / secondContentValue);
 
-                } else {
-                    return;
                 }
 
             }
 
             calculating();
+            
+            // ボタンの表示
+            let btn = document.getElementById('btn');
+            btn.style.display="block";
+
             resolve();
 
         })
     })
 
+}
+
+const loading = () => {
+    location.reload();
 }
 
 
