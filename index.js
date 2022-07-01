@@ -1,5 +1,7 @@
 "use strict";
 
+let arrayForCalculate = [];
+
 const chaningMainContent = () => {
 
     new Promise(resolve => {
@@ -10,6 +12,9 @@ const chaningMainContent = () => {
         //リボンの長さを変更
         let mainContent = document.getElementById('main_contet');
         mainContent.style.width = `${mainContentFiledValue}%`;
+
+        // リボンの長さを保存
+        arrayForCalculate.push(mainContentFiledValue);
         resolve();
 
     }).then(() => {
@@ -35,4 +40,16 @@ const chaningSecondContent = () => {
     displayingContent.style.width = `${displayingContentFiledValue}%`;
     displayingContent.style.display = "block";
 
+    // リボンの長さを保存
+    arrayForCalculate.push(displayingContentFiledValue);
+
+    // 割り算の処理
+    const calculating = () => {
+        let mainContentValue = parseInt(arrayForCalculate[0]);
+        let secondContentValue = parseInt(arrayForCalculate[1]);
+        console.log(mainContentValue / secondContentValue);
+
+    }
+
+    calculating();
 }
