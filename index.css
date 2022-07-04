@@ -14,6 +14,7 @@ html, body {
 .candies {
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .candy {
@@ -25,4 +26,18 @@ input[type="text"] {
     height: 12%;
     border-radius: 10px;
     text-align: center;
+}
+
+.div_for_img{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 108px;
+    left: 76px;
+    width: 25%;
+}
+
+.add{
+    width: 30%;
+    /* width: 10%; */
 }
