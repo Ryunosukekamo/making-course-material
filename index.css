@@ -1,22 +1,28 @@
-html,body{
+html, body {
     width: 100%;
     background-color: #C78644;
 }
 
-.dishes{
+.dishes {
     display: flex;
-    width: 80%;
 }
 
-.dish{
-    width: 40%;
+.dish {
+    width: 100%;
 }
 
-.candies{
+.candies {
     display: flex;
     flex-wrap: wrap;
 }
 
-.candy{
-  width: 10%;  
+.candy {
+    width: 10%;
+}
+
+input[type="text"] {
+    margin-left: 32%;
+    height: 12%;
+    border-radius: 10px;
+    text-align: center;
 }
