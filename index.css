@@ -1,7 +1,22 @@
 html,body{
     width: 100%;
+    background-color: #C78644;
 }
 
 .dishes{
     display: flex;
+    width: 80%;
+}
+
+.dish{
+    width: 40%;
+}
+
+.candies{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.candy{
+  width: 10%;  
 }
