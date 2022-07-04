@@ -28,16 +28,34 @@ input[type="text"] {
     text-align: center;
 }
 
-.div_for_img{
+.div_for_img_a {
     display: flex;
     flex-wrap: wrap;
     position: absolute;
     top: 108px;
-    left: 76px;
+    left: 6%;
     width: 25%;
 }
 
-.add{
+.div_for_img_b {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 25%;
+    top: 111px;
+    left: 39%;
+}
+
+.div_for_img_c {
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 25%;
+    top: 108px;
+    left: 72%;
+}
+
+.add {
     width: 30%;
     /* width: 10%; */
 }
