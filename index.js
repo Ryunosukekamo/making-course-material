@@ -5,16 +5,13 @@ let arrayForCandies = [];
 
 let array = [];
 
+let imgs=[];
 const displayingElements = () => {
     for (let i = 0; i < 12; i++) {
-        let img = document.createElement('img');
-        img.id = `img${i}`;
-        img.classList.add('candy');
-        img.src = './img/img.png';
-        document.getElementById('candies').appendChild(img);
-        array.push(img);
+        imgs.push(`<img src="./img/img.png" alt="" class="candy">`);
+        let candies = document.getElementById('candies');
+        candies.innerHTML += `${imgs[i]}`;
     }
-    console.log(array);
 }
 
 displayingElements();
@@ -52,19 +49,16 @@ const increasingDishA = () => {
 };
 
 const deletingDishA = (textFiledAValue) => {
-    for (let i = 0; i <= textFiledAValue; i++) {
-        array.splice(0, i);
-        // if (i = 0) {
-        //     array.splice(0, i);
-        // } else {
-        //     array.splice(0, i);
-        // }
-    }
 
-    console.log(array);
-    // array.forEach(function(element){
-    //     document.getElementById('candies').appendChild(element);
-    // })
+    console.log(imgs);
+    imgs.splice(0, textFiledAValue);
+    let candies = document.getElementById('candies');
+    candies.innerHTML="";
+    for (let i = 0; i < imgs.length; i++) {
+        let candies = document.getElementById('candies');
+        candies.innerHTML += `${imgs[i]}`;
+    }
+    
 }
 
 // const increasingDishB = () => {
