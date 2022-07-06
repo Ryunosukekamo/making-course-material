@@ -1,11 +1,9 @@
 "use strict";
 
-// 
-let arrayForCandies = [];
 
 let array = [];
 
-let imgs=[];
+let imgs = [];
 const displayingElements = () => {
     for (let i = 0; i < 12; i++) {
         imgs.push(`<img src="./img/img.png" alt="" class="candy">`);
@@ -49,103 +47,95 @@ const increasingDishA = () => {
 };
 
 const deletingDishA = (textFiledAValue) => {
-
-    console.log(imgs);
     imgs.splice(0, textFiledAValue);
     let candies = document.getElementById('candies');
-    candies.innerHTML="";
+    candies.innerHTML = "";
     for (let i = 0; i < imgs.length; i++) {
         let candies = document.getElementById('candies');
         candies.innerHTML += `${imgs[i]}`;
     }
-    
+
 }
 
-// const increasingDishB = () => {
-//     // input内の値を取得
-//     let textFiledB = document.getElementById('text_filed_b');
-//     console.log(textFiledB.value);
+const increasingDishB = () => {
+    // input内の値を取得
+    let textFiledB = document.getElementById('text_filed_b');
+    console.log(textFiledB.value);
 
-//     // あめ玉を囲う箱をつくる
-//     let divForImgB = document.createElement('div');
-//     divForImgB.classList.add('div_for_img_b');
+    // あめ玉を囲う箱をつくる
+    let divForImgB = document.createElement('div');
+    divForImgB.classList.add('div_for_img_b');
 
-//     // 値分A君用のお皿にあめ玉をうつす
-//     for (let i = 1; i <= textFiledB.value; i++) {
+    // 値分A君用のお皿にあめ玉をうつす
+    for (let i = 1; i <= textFiledB.value; i++) {
 
-//         // あめ玉を入力値分増やす
-//         let img = document.createElement('img');
-//         img.id = `imgB${i}`;
-//         img.classList.add('add');
-//         img.src = './img/img.png';
+        // あめ玉を入力値分増やす
+        let img = document.createElement('img');
+        img.id = `imgB${i}`;
+        img.classList.add('add');
+        img.src = './img/img.png';
 
-//         let dishB = document.getElementById('dish_b');
-//         dishB.appendChild(divForImgB);
-//         divForImgB.appendChild(img);
+        let dishB = document.getElementById('dish_b');
+        dishB.appendChild(divForImgB);
+        divForImgB.appendChild(img);
 
-//         // メモ
-//         //* appendchildに`${img}`するとエラー出る
-//     }
-//     // 配列に代入＝値の保存
-//     arrayForCandies.push(textFiledB.value);
+        // メモ
+        //* appendchildに`${img}`するとエラー出る
+    }
+    // 配列に代入＝値の保存
+    arrayForCandies.push(textFiledB.value);
 
-//     deletingDishB();
-// };
+    deletingDishB(textFiledB.value);
+};
 
-// const deletingDishB = () => {
-//     if (arrayForCandies[1]) {
-//         // 配列の要素を文字列から数値に変換
-//         parseInt(arrayForCandies[1], 10);
+const deletingDishB = (textFiledBValue) => {
+    imgs.splice(0, textFiledBValue);
+    let candies = document.getElementById('candies');
+    candies.innerHTML = "";
+    for (let i = 0; i < imgs.length; i++) {
+        let candies = document.getElementById('candies');
+        candies.innerHTML += `${imgs[i]}`;
+    }
+}
+const increasingDishC = () => {
+    // input内の値を取得
+    let textFiledC = document.getElementById('text_filed_c');
+    console.log(textFiledC.value);
 
-//         for (let i = 0; i < arrayForCandies[1]; i++) {
-//             let candies = document.getElementById('candies');
-//             candies.removeChild(candies.children[i]);
-//             console.log( candies.children[i]);
-//         }
-//     }
-// }
-// const increasingDishC = () => {
-//     // input内の値を取得
-//     let textFiledC = document.getElementById('text_filed_c');
-//     console.log(textFiledC.value);
+    // あめ玉を囲う箱をつくる
+    let divForImgC = document.createElement('div');
+    divForImgC.classList.add('div_for_img_c');
 
-//     // あめ玉を囲う箱をつくる
-//     let divForImgC = document.createElement('div');
-//     divForImgC.classList.add('div_for_img_c');
+    // 値分A君用のお皿にあめ玉をうつす
+    for (let i = 1; i <= textFiledC.value; i++) {
 
-//     // 値分A君用のお皿にあめ玉をうつす
-//     for (let i = 1; i <= textFiledC.value; i++) {
+        // あめ玉を入力値分増やす
+        let img = document.createElement('img');
+        img.id = `imgC${i}`;
+        img.classList.add('add');
+        img.src = './img/img.png';
 
-//         // あめ玉を入力値分増やす
-//         let img = document.createElement('img');
-//         img.id = `imgC${i}`;
-//         img.classList.add('add');
-//         img.src = './img/img.png';
+        let dishB = document.getElementById('dish_c');
+        dishB.appendChild(divForImgC);
+        divForImgC.appendChild(img);
 
-//         let dishB = document.getElementById('dish_c');
-//         dishB.appendChild(divForImgC);
-//         divForImgC.appendChild(img);
+        // メモ
+        //* appendchildに`${img}`するとエラー出る
+    }
+    // 配列に代入＝値の保存
+    arrayForCandies.push(textFiledC.value);
 
-//         // メモ
-//         //* appendchildに`${img}`するとエラー出る
-//     }
-//     // 配列に代入＝値の保存
-//     arrayForCandies.push(textFiledC.value);
+    deletingDishC(textFiledC.value);
+};
 
-//     deletingDishC();
-// };
-
-// const deletingDishC = () => {
-//     if (arrayForCandies[2]) {
-//         // 配列の要素を文字列から数値に変換
-//         parseInt(arrayForCandies[2], 10);
-
-//         for (let i = 0; i < arrayForCandies[2]; i++) {
-//             let candies = document.getElementById('candies');
-//             candies.removeChild(candies.children[i]);
-//             console.log( candies.children[i]);
-//         }
-//     }
-// }
+const deletingDishC = (textFiledCValue) => {
+    imgs.splice(0, textFiledCValue);
+    let candies = document.getElementById('candies');
+    candies.innerHTML = "";
+    for (let i = 0; i < imgs.length; i++) {
+        let candies = document.getElementById('candies');
+        candies.innerHTML += `${imgs[i]}`;
+    }
+}
 
 
