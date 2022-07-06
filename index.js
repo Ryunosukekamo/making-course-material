@@ -3,6 +3,23 @@
 // 
 let arrayForCandies = [];
 
+let array = [];
+
+const displayingElements = () => {
+    for (let i = 0; i < 12; i++) {
+        let img = document.createElement('img');
+        img.id = `img${i}`;
+        img.classList.add('candy');
+        img.src = './img/img.png';
+        document.getElementById('candies').appendChild(img);
+        array.push(img);
+    }
+    console.log(array);
+}
+
+displayingElements();
+
+
 const increasingDishA = () => {
     // input内の値を取得
     let textFiledA = document.getElementById('text_filed_a');
@@ -35,24 +52,19 @@ const increasingDishA = () => {
 };
 
 const deletingDishA = (textFiledAValue) => {
-           for (let i = 0; i < textFiledAValue; i++) {
-            let candies = document.getElementById('candies');
-            // console.log(candies.children[i]);
-            candies.removeChild(candies.children[i]);
-            // console.log(candies.children[i]);
-        }
+    for (let i = 0; i <= textFiledAValue; i++) {
+        array.splice(0, i);
+        // if (i = 0) {
+        //     array.splice(0, i);
+        // } else {
+        //     array.splice(0, i);
+        // }
+    }
 
-    // if (arrayForCandies[0]) {
-    //     // 配列の要素を文字列から数値に変換
-    //     parseInt(arrayForCandies[0]);
-
-    //     for (let i = 0; i < arrayForCandies[0]; i++) {
-    //         let candies = document.getElementById('candies');
-    //         console.log(candies.children[i]);
-    //         candies.removeChild(candies.children[i]);
-    //         // console.log(candies.children[i]);
-    //     }
-    // }
+    console.log(array);
+    // array.forEach(function(element){
+    //     document.getElementById('candies').appendChild(element);
+    // })
 }
 
 // const increasingDishB = () => {
