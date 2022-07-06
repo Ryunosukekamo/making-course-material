@@ -6,7 +6,7 @@ let imgs = [];
 // 空配列にimgを入れ、HTMLに表示
 const displayingElements = () => {
     for (let i = 0; i < 12; i++) {
-        imgs.push(`<img src="./img/img.png" alt="" class="candy">`);
+        imgs.push(`<img src="../img/candy.png" alt="" class="candy">`);
         let candies = document.getElementById('candies');
         candies.innerHTML += `${imgs[i]}`;
     }
@@ -30,7 +30,7 @@ const increasingDishA = () => {
         let img = document.createElement('img');
         img.id = `imgA${i}`;
         img.classList.add('add');
-        img.src = './img/img.png';
+        img.src = '../img/candy.png';
 
         // 実際にお皿の上に表示
         let dishA = document.getElementById('dish_a');
@@ -68,7 +68,7 @@ const increasingDishB = () => {
         let img = document.createElement('img');
         img.id = `imgB${i}`;
         img.classList.add('add');
-        img.src = './img/img.png';
+        img.src = '../img/candy.png';
 
         let dishB = document.getElementById('dish_b');
         dishB.appendChild(divForImgB);
@@ -103,7 +103,7 @@ const increasingDishC = () => {
         let img = document.createElement('img');
         img.id = `imgC${i}`;
         img.classList.add('add');
-        img.src = './img/img.png';
+        img.src = '../img/candy.png';
 
         let dishC = document.getElementById('dish_c');
         dishC.appendChild(divForImgC);
