@@ -1,9 +1,9 @@
 "use strict";
 
-
-let array = [];
-
+// 表示する画像を入れておくために、空配列を生成
 let imgs = [];
+
+// 空配列にimgを入れ、HTMLに表示
 const displayingElements = () => {
     for (let i = 0; i < 12; i++) {
         imgs.push(`<img src="./img/img.png" alt="" class="candy">`);
@@ -14,7 +14,7 @@ const displayingElements = () => {
 
 displayingElements();
 
-
+// A君用のあめ玉を増やす処理
 const increasingDishA = () => {
     // input内の値を取得
     let textFiledA = document.getElementById('text_filed_a');
@@ -33,19 +33,16 @@ const increasingDishA = () => {
         img.classList.add('add');
         img.src = './img/img.png';
 
+        // 実際にお皿の上に表示
         let dishA = document.getElementById('dish_a');
         dishA.appendChild(divForImgA);
         divForImgA.appendChild(img);
-
-        // メモ
-        //* appendchildに`${img}`するとエラー出る
     }
-    // 配列に代入＝値の保存
-    arrayForCandies.push(textFiledA.value);
 
     deletingDishA(textFiledA.value);
 };
 
+// あめ玉を指定した数分、削除する処理
 const deletingDishA = (textFiledAValue) => {
     imgs.splice(0, textFiledAValue);
     let candies = document.getElementById('candies');
@@ -78,12 +75,8 @@ const increasingDishB = () => {
         let dishB = document.getElementById('dish_b');
         dishB.appendChild(divForImgB);
         divForImgB.appendChild(img);
-
-        // メモ
-        //* appendchildに`${img}`するとエラー出る
     }
-    // 配列に代入＝値の保存
-    arrayForCandies.push(textFiledB.value);
+
 
     deletingDishB(textFiledB.value);
 };
@@ -100,7 +93,6 @@ const deletingDishB = (textFiledBValue) => {
 const increasingDishC = () => {
     // input内の値を取得
     let textFiledC = document.getElementById('text_filed_c');
-    console.log(textFiledC.value);
 
     // あめ玉を囲う箱をつくる
     let divForImgC = document.createElement('div');
@@ -115,15 +107,10 @@ const increasingDishC = () => {
         img.classList.add('add');
         img.src = './img/img.png';
 
-        let dishB = document.getElementById('dish_c');
-        dishB.appendChild(divForImgC);
+        let dishC = document.getElementById('dish_c');
+        dishC.appendChild(divForImgC);
         divForImgC.appendChild(img);
-
-        // メモ
-        //* appendchildに`${img}`するとエラー出る
     }
-    // 配列に代入＝値の保存
-    arrayForCandies.push(textFiledC.value);
 
     deletingDishC(textFiledC.value);
 };
