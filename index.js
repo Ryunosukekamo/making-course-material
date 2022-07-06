@@ -18,7 +18,6 @@ displayingElements();
 const increasingDishA = () => {
     // input内の値を取得
     let textFiledA = document.getElementById('text_filed_a');
-    console.log(textFiledA.value);
 
     // あめ玉を囲う箱をつくる
     let divForImgA = document.createElement('div');
@@ -57,7 +56,6 @@ const deletingDishA = (textFiledAValue) => {
 const increasingDishB = () => {
     // input内の値を取得
     let textFiledB = document.getElementById('text_filed_b');
-    console.log(textFiledB.value);
 
     // あめ玉を囲う箱をつくる
     let divForImgB = document.createElement('div');
