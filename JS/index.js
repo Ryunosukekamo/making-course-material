@@ -3,6 +3,9 @@
 // 表示する画像を入れておくために、空配列を生成
 let imgs = [];
 
+// 正誤判定用の配列
+let textFiledValues = [];
+
 // 空配列にimgを入れ、HTMLに表示
 const displayingElements = () => {
     for (let i = 0; i < 12; i++) {
@@ -37,6 +40,9 @@ const increasingDishA = () => {
         dishA.appendChild(divForImgA);
         divForImgA.appendChild(img);
     }
+
+    // 入力値を正誤判定用に保存
+    textFiledValues.push(textFiledA.value);
 
     deletingDishA(textFiledA.value);
 };
@@ -74,7 +80,8 @@ const increasingDishB = () => {
         dishB.appendChild(divForImgB);
         divForImgB.appendChild(img);
     }
-
+    // 入力値を正誤判定用に保存
+    textFiledValues.push(textFiledB.value);
 
     deletingDishB(textFiledB.value);
 };
@@ -109,6 +116,8 @@ const increasingDishC = () => {
         dishC.appendChild(divForImgC);
         divForImgC.appendChild(img);
     }
+    // 入力値を正誤判定用に保存
+    textFiledValues.push(textFiledC.value);
 
     deletingDishC(textFiledC.value);
 };
@@ -124,3 +133,13 @@ const deletingDishC = (textFiledCValue) => {
 }
 
 
+const btn = () => {
+    if (textFiledValues.length == 3) {
+        if (textFiledValues[0] && textFiledValues[1] && textFiledValues[2] == 4) {
+            console.log('正解');
+        } else {
+            console.log('不正解');
+        }
+    }
+
+}
