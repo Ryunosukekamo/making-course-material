@@ -45,6 +45,7 @@ const increasingDishA = () => {
     textFiledValues.push(textFiledA.value);
 
     deletingDishA(textFiledA.value);
+    checkingAnswer();
 };
 
 // あめ玉を指定した数分、削除する処理
@@ -84,6 +85,7 @@ const increasingDishB = () => {
     textFiledValues.push(textFiledB.value);
 
     deletingDishB(textFiledB.value);
+    checkingAnswer();
 };
 
 const deletingDishB = (textFiledBValue) => {
@@ -120,6 +122,7 @@ const increasingDishC = () => {
     textFiledValues.push(textFiledC.value);
 
     deletingDishC(textFiledC.value);
+    checkingAnswer();
 };
 
 const deletingDishC = (textFiledCValue) => {
@@ -133,13 +136,26 @@ const deletingDishC = (textFiledCValue) => {
 }
 
 
-const btn = () => {
+// const btn = () => {
+//     if (textFiledValues.length == 3) {
+//         if (textFiledValues[0] && textFiledValues[1] && textFiledValues[2] == 4) {
+//             console.log('正解');
+//         } else {
+//             console.log('不正解');
+//         }
+//     }
+
+// }
+
+const checkingAnswer = () => {
     if (textFiledValues.length == 3) {
         if (textFiledValues[0] && textFiledValues[1] && textFiledValues[2] == 4) {
             console.log('正解');
         } else {
             console.log('不正解');
         }
+    }else{
+        return;
     }
 
 }
