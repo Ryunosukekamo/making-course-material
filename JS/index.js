@@ -26,26 +26,49 @@ const increasingDishA = () => {
     let divForImgA = document.createElement('div');
     divForImgA.classList.add('div_for_img_a');
 
-    // 値分A君用のお皿にあめ玉をうつす
-    for (let i = 1; i <= textFiledA.value; i++) {
+    // 書き直し、２回以上inputタグを変更する時のために
+    let divForImgAClassName = document.getElementsByClassName('div_for_img_a');
 
-        // あめ玉を入力値分増やす
-        let img = document.createElement('img');
-        img.id = `imgA${i}`;
-        img.classList.add('add');
-        img.src = '../img/candy.png';
+    if (!divForImgAClassName[0]) {
+        // 値分A君用のお皿にあめ玉をうつす
+        for (let i = 1; i <= textFiledA.value; i++) {
 
-        // 実際にお皿の上に表示
-        let dishA = document.getElementById('dish_a');
-        dishA.appendChild(divForImgA);
-        divForImgA.appendChild(img);
+            // あめ玉を入力値分増やす
+            let img = document.createElement('img');
+            img.id = `imgA${i}`;
+            img.classList.add('add');
+            img.src = '../img/candy.png';
+
+            // 実際にお皿の上に表示
+            let dishA = document.getElementById('dish_a');
+            dishA.appendChild(divForImgA);
+            divForImgA.appendChild(img);
+        }
+
+        // 入力値を正誤判定用に保存
+        textFiledValues.push(textFiledA.value);
+
+        deletingDishA(textFiledA.value);
+        checkingAnswer();
+
+    } else if (divForImgAClassName[0]) {
+        divForImgAClassName[0].remove();
+        for (let i = 1; i <= textFiledA.value; i++) {
+
+            // あめ玉を入力値分増やす
+            let img = document.createElement('img');
+            img.id = `imgA${i}`;
+            img.classList.add('add');
+            img.src = '../img/candy.png';
+
+            // 実際にお皿の上に表示
+            let dishA = document.getElementById('dish_a');
+            dishA.appendChild(divForImgA);
+            divForImgA.appendChild(img);
+        }
     }
 
-    // 入力値を正誤判定用に保存
-    textFiledValues.push(textFiledA.value);
 
-    deletingDishA(textFiledA.value);
-    checkingAnswer();
 };
 
 // あめ玉を指定した数分、削除する処理
