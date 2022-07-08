@@ -135,18 +135,7 @@ const deletingDishC = (textFiledCValue) => {
     }
 }
 
-
-// const btn = () => {
-//     if (textFiledValues.length == 3) {
-//         if (textFiledValues[0] && textFiledValues[1] && textFiledValues[2] == 4) {
-//             console.log('正解');
-//         } else {
-//             console.log('不正解');
-//         }
-//     }
-
-// }
-
+// 正誤判定の処理
 const checkingAnswer = () => {
     if (textFiledValues.length == 3) {
         if (textFiledValues[0] && textFiledValues[1] && textFiledValues[2] == 4) {
@@ -154,7 +143,7 @@ const checkingAnswer = () => {
         } else {
             console.log('不正解');
         }
-    }else{
+    } else {
         return;
     }
 
